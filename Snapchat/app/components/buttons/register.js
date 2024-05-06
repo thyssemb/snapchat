@@ -1,12 +1,18 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-function Register() {
+function Register({ navigation }) {
+    const handleRegisterPress = () => {
+        navigation.navigate('RegisterScreen');
+    };
+
     return (
-        <Text style={styles.text}>
-            REGISTER
-        </Text>
-    )
+        <TouchableOpacity style={styles.container} onPress={handleRegisterPress}>
+            <Text style={styles.text}>
+                REGISTER
+            </Text>
+        </TouchableOpacity>
+    );
 }
 
 const styles = StyleSheet.create({
